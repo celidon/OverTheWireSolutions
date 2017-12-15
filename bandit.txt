@@ -1,0 +1,84 @@
+Level 0:
+	ssh bandit0@bandit.labs.overthewire.org
+	pass: bandit0
+
+Level 1:
+	cat readme
+	ssh bandit1@localhost
+	pass: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+Level 2:
+	cat ./-
+	ssh bandit2@localhost
+	pass: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+
+Level 3:
+	cat ./spaces\ in\ this\ filename
+	ssh bandit3@localhost
+	pass: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+
+Level 4:
+	cat inhere/.hidden
+	ssh bandit4@localhost
+	pass: pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+
+Level 5:
+	file inhere/-f*
+	cat inhere/-file07
+	ssh bandit5@localhost
+	pass: koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
+Level 6:
+	ls -alh $(find inhere/ -size 1033c)
+	cat inhere/maybehere07/.file2
+	ssh bandit6@localhost
+	pass: DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+Level 7:
+	find / -size 33c -user bandit7 -group bandit6
+	cat /var/lib/dpkg/info/bandit7.password
+	ssh bandit7@localhost
+	pass: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+Level 8:
+	grep millionth data.txt
+	ssh bandit8@localhost
+	pass: cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+
+Level 9:
+	sort data.txt | uniq -u
+	ssh bandit9@localhost
+	pass: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+
+Level 10:
+	strings data.txt | grep =
+	ssh bandit10@localhost
+	pass: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+
+Level 11:
+	base64 -d data.txt
+	ssh bandit11@localhost
+	pass: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+Level 12:
+	cat data.txt | tr a-zA-Z n-za-mN-ZA-M
+	ssh bandit12@localhost
+	pass: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+Level 13:
+	mkdir; cp data.txt; xxd -r; zcat; bzip2; zcat; tar; tar; bzip2; tar; zcat; cat
+	ssh bandit13@localhost
+	pass: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+Level 14:
+	ssh -i sshkey.private bandit14@localhost
+	cat /etc/bandit_pass/bandit14
+	pass: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+
+Level 15:
+	telnet localhost 30000
+	pass: BfMYroe26WYalil77FoDi9qh59eK5xNr
+
+Level 16:
+	openssl s_client -connect localhost:30001 -quiet
+	pass: cluFn7wTiGryunymYOu4RcffSxQluehd
